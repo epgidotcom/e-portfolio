@@ -17,10 +17,10 @@ export default {
         mono: ['JetBrains Mono', 'Consolas', 'monospace'],
       },
       boxShadow: {
-        panel: '0 10px 30px rgba(0, 0, 0, 0.25)',
+        panel: '0 18px 50px rgba(0, 0, 0, 0.28)',
+        glow: '0 0 0 1px rgba(77, 163, 255, 0.16), 0 18px 50px rgba(0, 0, 0, 0.28)',
       },
     },
   },
   plugins: [],
 }
-

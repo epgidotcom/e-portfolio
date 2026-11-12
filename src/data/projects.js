@@ -1,24 +1,41 @@
+import thesisDashboardDark from '../assets/projects/thesis/sdms-dashboard-dark.png'
+
 export const projects = [
   {
     id: 'student-discipline-management-system',
-    title: 'Student Discipline Management System With Predictive Analytics',
-    type: 'Full-Stack Web Application',
-    description:
-      'A capstone thesis focused on tracking student incidents, organizing records, and supporting data-informed intervention planning.',
-    technologies: ['React and Node.js', 'PostgreSQL', 'Predictive Analytics'],
-    role: 'Full Stack Developer/Technical Writer/IT Project Manager',
-    keyFeatures: [
-      'Incident and case tracking',
-      'Structured reporting views',
-      'Data preparation for predictive analysis',
+    title: 'Web-Based Student Discipline Management System with Predictive Analytics',
+    type: 'Thesis · Full-stack web application · Predictive analytics',
+    fullName: 'Web-Based Student Discipline Management System with Predictive Analytics',
+    period: 'Thesis project · Updated build in progress',
+    organization: 'Mataas na Paaralang Neptali A. Gonzales',
+    featured: true,
+    description: 'A role-aware discipline management platform that brings student records, incident workflows, appeals, communication, and repeat-risk exploration into one operational workspace. I served as project manager and primary full-stack developer on a team of four.',
+    technologies: ['React.js', 'Tailwind CSS', 'Node.js', 'REST APIs', 'PostgreSQL', 'ML', 'Vercel', 'Render', 'Neon'],
+    role: 'Project Manager and Primary Full-Stack Developer · Team of 4',
+    status: 'Updated prototype · Deployment pending',
+    liveUrl: 'https://mpnag.vercel.app',
+    liveLabel: 'Open live demo prototype',
+    caseStudyUrl: '/projects/student-discipline-management-system',
+    evidenceLabel: 'Screenshots: updated local build · not yet deployed',
+    problem: 'Guidance teams need a more traceable way to move from a student record to an incident, sanction, appeal, and follow-up. Disconnected records and manual handoffs make it harder to see open cases, repeat patterns, and the next responsible action.',
+    users: ['Guidance and discipline staff', 'School administrators', 'Students submitting or tracking appeals'],
+    keyFeatures: ['Role-aware dashboard', 'Student records and CSV import', 'Violation lifecycle and sanctions', 'Appeals and messages', 'Predictive repeat-risk exploration'],
+    modules: ['Dashboard and analytics', 'Student portal', 'Violation records', 'Appeals management', 'Messages and SMS', 'Account management'],
+    research: 'The thesis frames the system as a web-based student discipline management platform that combines workflow support with predictive analysis of repeat-violation patterns. This portfolio summary keeps the research discussion qualitative and does not invent accuracy, adoption, or performance results.',
+    workflow: ['Authenticate according to account role', 'Search or import student records', 'Log an incident and apply a configured sanction path', 'Review status, evidence, and appeals', 'Use dashboard trends and predictive signals to prioritize follow-up'],
+    architecture: ['React and Tailwind CSS interface', 'Node.js / Express REST API', 'PostgreSQL / Neon persistence', 'Python / FastAPI predictive inference service', 'Chart.js dashboard visualizations', 'Vercel, Render, and Neon deployment setup'],
+    predictiveAnalytics: 'The updated dashboard exposes repeat-offender KPIs, filterable trend views, and section-level likelihood exploration. The system is presented as decision support for human review, not as an automated disciplinary decision-maker.',
+    contribution: 'Led project coordination for a four-person team and handled the primary full-stack implementation across the interface, API-connected workflows, integrations, and deployment troubleshooting.',
+    challenge: 'The prototype had to connect role-based access, high-sensitivity student records, incident handling, configurable sanctions, appeals, communication, reporting, and predictive analysis without making the workflow feel fragmented.',
+    solution: 'Structured the product around focused modules and explicit API responsibilities. The dashboard gives staff a concise operational overview, while dedicated pages separate records, violations, appeals, messages, settings, and accounts.',
+    validation: 'Validated the updated experience through source-level workflow checks, route smoke tests, predictive payload contract coverage, and responsive UI review. Public screenshots use representative interface states only.',
+    lessons: ['Operational software needs clear ownership at every workflow step.', 'Predictive features need transparent filters and human review boundaries.', 'Version labels matter when a deployed prototype and an updated local build coexist.'],
+    evidence: [
+      { src: thesisDashboardDark, alt: 'Authenticated dark-mode dashboard of the updated student discipline management system', caption: 'Updated local build: KPIs, filters, cases, and repeat-offender analytics.' },
     ],
-    challengesAndLearning:
-      'To be updated"',
-    images: [
-      {
-        src: '/src/assets/images/project-placeholder.png',
-        alt: 'To be updated. Note to self: Add an actual screenshot of the Student Discipline Management System.',
-      },
-    ],
+    note: 'Public portfolio summary only: no real student records, credentials, private URLs, or sensitive operational data are included. The live link is the deployed demo prototype; the screenshot and case-study details above describe the newer local build.',
   },
+  { id: 'cyclelink', title: 'CycleLink', type: 'Final project · AI / RAG · Bicycle maintenance chatbot', description: 'A source-aware bicycle-maintenance chatbot that retrieves relevant manual passages before generating troubleshooting guidance. I led the project direction and helped optimize the final RAG workflow.', technologies: ['Python', 'RAG', 'LangChain', 'ChromaDB', 'Sentence Transformers', 'SmolLM2', 'GPU experiments'], role: 'Team Leader · Idea Contributor · RAG Optimization Contributor', keyFeatures: ['Bicycle maintenance troubleshooting', 'PDF knowledge-base retrieval', 'Chunking and overlap experiments', 'Source-aware generation'], contribution: 'Led the final project direction, contributed most of the core ideas, helped define the RAG workflow, and supported chunking, retrieval, prompt, and GPU experiment optimization.', challenge: 'Balancing retrieval relevance, response speed, source grounding, and safe troubleshooting guidance across varied bicycle-maintenance questions.', solution: 'Built a document-based RAG pipeline with PDF processing, character-based chunking, MiniLM embeddings, ChromaDB retrieval, and SmolLM2-360M-Instruct generation.' },
+  { id: 'gaming-lore-rag-chatbot', title: 'Gaming Lore RAG Chatbot', type: 'AI / RAG · Domain-specific chatbot', description: 'A domain-specific RAG chatbot exploring how retrieval and language model generation can answer questions about gaming lore.', technologies: ['RAG', 'LLM', 'Chunking experiments'], role: 'Project contributor', keyFeatures: ['Gaming lore knowledge domain', 'Chunk size and overlap experimentation', 'LLM integration'], contribution: 'Explored chunk size and overlap settings and integrated an LLM into the domain-specific chatbot workflow.', challenge: 'Understanding how document chunking affects the context available to the language model.', solution: 'Experimented with chunk size and overlap as part of the retrieval workflow.' },
+  { id: 'discord-live-status', title: 'Custom Discord Live Status Modification', type: 'Individual project · Node.js', description: 'An earlier individual project that modified Discord live status behavior using Node.js.', technologies: ['Node.js'], role: 'Individual developer', keyFeatures: ['Custom Discord live status modification'], contribution: 'Built as an individual Node.js project.', challenge: 'Exploring a custom modification to Discord live status behavior.', solution: 'Implemented the modification with Node.js.' },
 ]

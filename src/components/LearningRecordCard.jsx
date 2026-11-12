@@ -29,6 +29,7 @@ export default function LearningRecordCard({ record }) {
           <h4 className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Reflection</h4>
           <p className="mt-1 text-muted">{record.reflection}</p>
         </section>
+        <a href={record.download.file} download className="inline-flex rounded-md border border-accent px-3 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-bg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">{record.download.label} ↓</a>
       </div>
     </article>
   )

@@ -1,33 +1,16 @@
-import SectionHeader from '../components/SectionHeader'
+﻿import SectionHeader from '../components/SectionHeader'
+import Reveal from '../components/Reveal'
+
+const skillGroups = [
+  { title: 'Software development', skills: ['React.js', 'Tailwind CSS', 'Node.js', 'REST APIs', 'PostgreSQL'] },
+  { title: 'AI and RAG', skills: ['Natural Language Processing', 'Large Language Models', 'Retrieval Augmented Generation', 'Predictive analytics'] },
+  { title: 'Quality and delivery', skills: ['Quality assurance interest', 'Vercel', 'Render', 'Neon'] },
+]
 
 export default function About() {
-  return (
-    <section className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-      <SectionHeader
-        label="/about"
-        title="About Me"
-        subtitle="Fitzgerald Larido · Information Technology Student"
-      />
-
-      <div className="max-w-3xl space-y-5 text-base leading-relaxed text-muted">
-        <p>
-          I am an Information Technology student focused on building reliable systems and improving how data is
-          used to support better decisions. My ePortfolio documents both academic progress and technical growth
-          through structured learning records and project outputs.
-        </p>
-
-        <p>
-          My current interests include full stack web development and DevOPS, I enjoy
-          understanding how these areas connect in practical applications that are clear, maintainable, and
-          useful to real users. I also like to do videography, video editing and content creation.
-        </p>
-
-        <p>
-          This workspace is designed to show my development process, not just final outputs. As I continue my
-          studies, I will keep refining this portfolio with stronger academic artifacts, clearer reflections,
-          and more complete project documentation. This will be revamp into a professional e-portfolio in the future.
-        </p>
-      </div>
-    </section>
-  )
+  return <article className="space-y-6">
+    <Reveal><section className="motion-hover rounded-2xl border border-border bg-card p-6 shadow-panel sm:p-8"><SectionHeader level={1} label="/about" title="A builder who follows the problem through" subtitle="Fourth-year BSIT student · Full-stack development · AI/RAG · Quality-minded engineering" /><div className="max-w-3xl space-y-5 text-base leading-relaxed text-muted"><p>I am Fitzgerald Larido, a fourth-year Information Technology student who enjoys turning requirements into practical software and understanding how people use it. I led a four-person thesis team while contributing as its primary full-stack developer.</p><p>My work spans web application development, predictive analytics, and retrieval augmented generation. I’m especially interested in systems where implementation, data, and user experience need to work together.</p><p>I enjoy taking a system from features and integrations through deployment, then working through the issues that appear in production. Outside technical work, I enjoy videography, video editing, and content creation.</p></div></section></Reveal>
+    <Reveal delay={100}><section id="contact" className="scroll-mt-24 rounded-2xl border border-accent/30 bg-gradient-to-br from-surface to-card p-6 shadow-glow sm:p-8"><SectionHeader label="/contact" title="Let’s talk about useful software" subtitle="I’m open to OJT and internship opportunities in software development, AI, and QA." /><div className="flex flex-wrap gap-3"><a href="https://www.linkedin.com/in/fitzgerald-larido-663699314" target="_blank" rel="noreferrer" className="inline-flex rounded-md border border-accent bg-accent px-4 py-2 text-sm font-semibold text-bg transition-colors hover:bg-transparent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">Connect on LinkedIn ↗</a><a href="https://github.com/epgidotcom" target="_blank" rel="noreferrer" className="inline-flex rounded-md border border-border px-4 py-2 text-sm font-semibold text-muted transition-colors hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent">View GitHub ↗</a></div></section></Reveal>
+    <Reveal delay={160}><section className="rounded-2xl border border-border bg-card p-6 sm:p-8"><SectionHeader label="/skills" title="Skills and tools" subtitle="Technologies and areas represented in my project work." /><div className="grid gap-4 sm:grid-cols-3">{skillGroups.map((group) => <article key={group.title} className="motion-hover rounded-lg border border-border bg-surface p-4"><h3 className="font-semibold text-text">{group.title}</h3><ul className="mt-3 flex flex-wrap gap-2">{group.skills.map((skill) => <li key={skill} className="rounded-md border border-border bg-card px-2 py-1 text-xs text-muted">{skill}</li>)}</ul></article>)}</div></section></Reveal>
+  </article>
 }
